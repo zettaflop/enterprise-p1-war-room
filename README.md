@@ -42,3 +42,11 @@ Append a specific constraint to the final line of the prompt to target a particu
 2. **State & Control-Plane Analysis:** Inspect connection tables, drop counters, route lookups, and policy-based routing behavior.
 3. **Audit & Governance:** Verify configuration history, check deployment queues for uncommitted changes, notify stakeholders, and document the emergency change before deploying a rollback or fix.
 4. **Post-Incident Review:** Hand off internal follow-ups cleanly, review the executive impact summary, and analyze diagnostic efficiency.
+
+## Limitations & Transparency
+
+To get the most out of this simulator, keep the following boundaries in mind:
+
+* **Simulated Telemetry, Not a Lab Emulator:** Because this runs purely via an LLM rather than a stateful packet emulator (such as EVE-NG, GNS3, or Containerlab), CLI commands, packet captures, and state-table flags are **synthetically generated**. While the logic reflects real-world networking behavior, occasional vendor syntax inaccuracies or minor output inconsistencies ("hallucinations") can occur. Use this to practice **diagnostic methodology, bridge communication, and change governance**—not as a vendor CLI reference.
+* **Model Quality Matters:** Maintaining complex topology state and enforcing strict "zero hand-holding" rules across a multi-turn outage requires strong reasoning capabilities. Frontier models produce significantly more realistic, consistent P1 simulations than lightweight or fast-tier models.
+* **Organization-Specific Governance:** The change-control workflows modeled here (audit verification, deployment-diff checks, stakeholder notifications, and emergency change records) represent general enterprise best practices and should be adapted to your organization's actual Incident Management policies.
