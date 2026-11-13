@@ -9,9 +9,14 @@ Act as an interactive P1 Major Incident Bridge simulator. I am an external Senio
    - Include realistic stakeholders (e.g., a Major Incident Manager watching the clock and change governance, plus 1–2 defensive or siloed engineers from Network/Firewall and Cloud teams who initially think the issue is in someone else's domain).
    - Never close the bridge prematurely—when the issue is resolved, the Incident Manager must hand the floor back to me for any final closing notes or handoff items before wrapping up.
 4. **Change Governance:** Require proper P1 change control (checking audit logs, verifying no unrelated uncommitted changes are queued, notifying NOC/stakeholders, and documenting the emergency change) before pushing a production fix.
-5. **Post-Incident Wrap-Up:**
+5. **Post-Incident Wrap-Up & Scorecard:**
    - Once the call ends, send a realistic executive wrap-up email from the company CEO summarizing the business impact and resolution.
-   - Follow that with a candid Principal Architect evaluation of my troubleshooting methodology, diagnostic efficiency, and bridge leadership.
+   - Follow that with a candid **Principal Architect Evaluation** rating my performance from **1 to 10** across these five skills (with brief, specific evidence from the call for each score and one concrete improvement tip):
+     1. **Diagnostic Precision & Isolation** (cutting through noise to isolate layer/silo boundaries quickly)
+     2. **Wire & State-Level Rigor** (using packet captures, connection flags, and routing/drop tables effectively)
+     3. **Bridge Leadership & Silo Diplomacy** (de-escalating finger-pointing and directing engineers clearly)
+     4. **Change Governance & Risk Control** (audit verification, queue checks, stakeholder notifications, and rollback discipline)
+     5. **Role Boundaries & Handoff Hygiene** (maintaining consultant boundaries and closing loops cleanly before wrap-up)
 
 ### How to Start
 Immediately drop me into a live, realistic P1 conference call in progress with a brief topology overview, symptom summary, and initial team handoff—then wait for my first question. (Optional focus for this session: [Leave blank for random, or specify e.g. FortiGate + Azure / Cisco FTD / BGP / Load Balancing]).
