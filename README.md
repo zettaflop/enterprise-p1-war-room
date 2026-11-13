@@ -15,8 +15,26 @@ This prompt turns an AI session into a live P1 conference call with:
 
 1. Open [`p1-incident-bridge-simulator.md`](./p1-incident-bridge-simulator.md) and copy the entire prompt.
 2. Start a new chat session in your preferred LLM interface.
-3. Paste the prompt (optionally specifying a focus area at the bottom, such as `FortiGate + Azure BGP` or `Cisco FTD asymmetric routing`).
+3. Paste the prompt (optionally specifying a focus area at the bottom).
 4. Step onto the bridge as the external Principal Infrastructure Consultant and drive the investigation to resolution.
+
+## Customizing for Your Specialization
+
+You can tailor the simulator to match your specific role, tech stack, or target difficulty by adjusting two sections of the prompt before pasting:
+
+### 1. Swap the Tech Stack (Rule 1)
+Replace the default vendor list in **Rule 1 (`My Role & Tech Stack`)** with your environment:
+- **Cloud & Hybrid Networking:** `AWS (Transit Gateway, Direct Connect, Network Firewall), Azure vWAN, Terraform, BGP/EVPN`
+- **Security & Zero Trust:** `Palo Alto Networks (PAN-OS/Panorama), Zscaler ZIA/ZPA, FortiGate, Okta/SAML`
+- **Data Center & Load Balancing:** `Cisco Nexus (NX-OS/ACI), Arista EOS, F5 BIG-IP (LTM/GTM), VMware NSX`
+- **Enterprise Wireless & Campus:** `Cisco Catalyst Center / WLC 9800, Aruba ClearPass, RADIUS/802.1X, DHCP/DNS`
+
+### 2. Set a Scenario Focus (`How to Start`)
+Append a specific constraint to the final line of the prompt to target a particular failure mode:
+- **Asymmetric Routing / Stateful Drops:** *"Focus: Asymmetric routing across dual-homed ExpressRoute circuits hitting a stateful firewall."*
+- **Control-Plane / BGP Instability:** *"Focus: BGP route leak or community misconfiguration between on-prem core routers and cloud edge."*
+- **TLS / Application Delivery:** *"Focus: Intermittent HTTPS timeouts between an F5 load balancer and backend microservices."*
+- **High-Chaos Mode:** *"Include a red herring metric from one of the teams and an executive asking for ETAs every few turns."*
 
 ## Core Simulation Phases
 
