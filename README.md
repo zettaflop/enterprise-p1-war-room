@@ -10,6 +10,7 @@ This prompt turns an AI session into a live P1 conference call with:
 - **Multi-Vendor Enterprise Topologies:** Fortinet (FortiGate), Cisco Secure Firewall (FTD/FMC), Cisco routing/switching, F5 BIG-IP, and Microsoft Azure (ExpressRoute, vWAN, VNets, BGP).
 - **Zero Hand-Holding:** No hints, highlighted log lines, or suggested next steps—diagnose strictly through raw packet captures, connection state flags, routing tables, and audit logs.
 - **Realistic Bridge Dynamics:** Competing team silos (Cloud vs. Data Center/Firewall), a Major Incident Manager tracking time and change control, and an executive post-incident evaluation.
+- **5-Skill Principal Scorecard:** An objective 1–10 evaluation at the end of every session across key incident-command dimensions.
 
 ## How to Use
 
@@ -41,7 +42,12 @@ Append a specific constraint to the final line of the prompt to target a particu
 1. **Triage & Isolation:** Clarify traffic flows (NAT vs. routing, ingress/egress paths) and request targeted wire captures to eliminate silo finger-pointing.
 2. **State & Control-Plane Analysis:** Inspect connection tables, drop counters, route lookups, and policy-based routing behavior.
 3. **Audit & Governance:** Verify configuration history, check deployment queues for uncommitted changes, notify stakeholders, and document the emergency change before deploying a rollback or fix.
-4. **Post-Incident Review:** Hand off internal follow-ups cleanly, review the executive impact summary, and analyze diagnostic efficiency.
+4. **Post-Incident Review & Scorecard:** Hand off internal follow-ups cleanly, review the executive impact summary, and receive a **1–10 Principal Architect rating** across:
+   - **Diagnostic Precision & Isolation**
+   - **Wire & State-Level Rigor**
+   - **Bridge Leadership & Silo Diplomacy**
+   - **Change Governance & Risk Control**
+   - **Role Boundaries & Handoff Hygiene**
 
 ## Limitations & Transparency
 
