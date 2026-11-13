@@ -37,6 +37,13 @@ Append a specific constraint to the final line of the prompt to target a particu
 - **TLS / Application Delivery:** *"Focus: Intermittent HTTPS timeouts between an F5 load balancer and backend microservices."*
 - **High-Chaos Mode:** *"Include a red herring metric from one of the teams and an executive asking for ETAs every few turns."*
 
+### 3. Dial Up the Realism ("Pain Mode" Modifiers)
+If the default simulation feels too smooth, append any of these modifiers to **Rule 2** or **Rule 3** of the prompt to simulate real-world 2:00 AM bridge friction:
+
+- **Tooling & Access Friction:** *"Occasionally make an engineer take an extra turn to get CLI access, run a capture on the wrong interface/VRF first, or ask for clarification on pre-NAT vs. post-NAT IPs before returning the right output."*
+- **Noisy Logs & Red Herrings:** *"Bury the relevant flow inside realistic background noise (health-check probes, unrelated drops, or a red herring metric from one of the teams) so I have to filter out false leads."*
+- **Executive DR Pressure:** *"Have a VP or Application Owner join mid-call pushing for a premature DR failover that would worsen the outage unless I talk them down with concrete technical evidence."*
+
 ## Core Simulation Phases
 
 1. **Triage & Isolation:** Clarify traffic flows (NAT vs. routing, ingress/egress paths) and request targeted wire captures to eliminate silo finger-pointing.
